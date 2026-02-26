@@ -1,82 +1,97 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <title>For My Special Girl ❤️</title>
-    <style>
-        body {
-            margin: 0;
-            text-align: center;
-            background: linear-gradient(to right, #ff9a9e, #fad0c4);
-            font-family: Arial;
-            overflow: hidden;
-        }
+<title>For Someone Special ❤️</title>
 
-        .container {
-            margin-top: 50px;
-        }
+<style>
+body{
+    margin:0;
+    text-align:center;
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    font-family: Arial, sans-serif;
+    overflow:hidden;
+}
 
-        img {
-            width: 250px;
-            height: 250px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid white;
-            box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
-        }
+.container{
+    margin-top:60px;
+}
 
-        h1 {
-            color: white;
-            margin-top: 20px;
-        }
+img{
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    object-fit:cover;
+    border:6px solid white;
+    box-shadow:0 0 25px rgba(0,0,0,0.3);
+}
 
-        button {
-            padding: 15px 30px;
-            font-size: 18px;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-            margin: 20px;
-        }
+h1{
+    color:white;
+    margin-top:20px;
+}
 
-        #yes {
-            background: #ff4d6d;
-            color: white;
-        }
+h2{
+    color:#fff;
+}
 
-        #no {
-            background: gray;
-            color: white;
-            position: absolute;
-        }
-    </style>
+button{
+    padding:15px 30px;
+    font-size:18px;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    margin:20px;
+    transition:0.3s;
+}
+
+#yes{
+    background:#ff4d6d;
+    color:white;
+}
+
+#yes:hover{
+    transform:scale(1.1);
+}
+
+#no{
+    background:gray;
+    color:white;
+    position:absolute;
+}
+</style>
 </head>
 
 <body>
 
-    <div class="container">
-        <!-- Yaha apni gf ki photo ka naam daal -->
-        <img src="swarna.jpg.jpeg" alt="My Love">
-        <h1>Hey swarna❤️</h1>
-        <h2>Would you date me?</h2>
+<div class="container">
+    <!-- Photo ka exact naam yaha likh -->
+    <img src="swarna.jpg.jpeg" alt="Her Photo">
 
-        <button id="yes" onclick="showLove()">Yes 💖</button>
-        <button id="no" onmouseover="moveButton()">Nahii😅</button>
-    </div>
+    <h1>Hey Swarna ❤️</h1>
+    <h2>Would you date me?</h2>
 
-    <script>
-        function moveButton() {
-            var x = Math.random() * window.innerWidth;
-            var y = Math.random() * window.innerHeight;
-            document.getElementById("no").style.left = x + "px";
-            document.getElementById("no").style.top = y + "px";
-        }
+    <button id="yes" onclick="showLove()">Yes 💖</button>
+    <button id="no" onmouseover="moveButton()">Nahi 😅</button>
+</div>
 
-        function showLove() {
-            document.body.innerHTML = "<h1 style='color:white;margin-top:200px;'>Yayyy ❤️ I promise to make you smile always 💕</h1>";
-        }
-    </script>
+<script>
+function moveButton(){
+    var x = Math.random() * (window.innerWidth - 100);
+    var y = Math.random() * (window.innerHeight - 100);
+    document.getElementById("no").style.left = x + "px";
+    document.getElementById("no").style.top = y + "px";
+}
+
+function showLove(){
+    document.body.innerHTML = `
+        <div style="margin-top:200px; text-align:center; font-family:Arial;">
+            <h1 style="color:#ff4d6d; font-size:40px;">Yayyyyy ❤️</h1>
+            <h2>You just made me the happiest person 😭💕</h2>
+            <p style="font-size:18px;">Now take a screenshot and send it to me 😌💌</p>
+        </div>
+    `;
+}
+</script>
 
 </body>
-
 </html>
